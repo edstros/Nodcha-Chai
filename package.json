@@ -1,0 +1,19 @@
+{
+  "name": "nodcha-chai",
+  "version": "1.0.0",
+  "description": "Node, Mocha, Chai stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edstros/Nodcha-Chai.git"
+  },
+  "author": "Edwin Acevedo <edwin.a.acevedo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edstros/Nodcha-Chai/issues"
+  },
+  "homepage": "https://github.com/edstros/Nodcha-Chai#readme"
+}

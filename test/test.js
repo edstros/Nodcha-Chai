@@ -1,7 +1,41 @@
-var assert = require("chai").should();
+var path = require('path');
+var should = require('chai').should();
+var Animal = require(path.join(process.cwd() + '/lib/Animal'));
+//process.cwd goes to the root dir, so it can go to any directory from the root
+//path.join gives you a proper path, but need to be defined
 describe('Tests', function () {
   it('truthyness', function () {
     true.should.equal(true);
+  });
+});
+describe('Animal', function(){
+  describe('constructor', function(){
+    it('should return an animal object', function(){
+      var animal = new Animal();
+      animal.should.be.an('object');
+      animal.should.be.an.instanceOf(Animal);
+    });
+    it('should be alive', function (){
+      var animal = new Animal();
+      animal.isAlive.should.be.true;
+      //isAlive defined in /lib/Animal.js
+    });
+  });
+
+  describe('#beCute()', function(){
+    it('should be a prototype method', function(){
+      var animal = new Animal();
+      animal.should.respondTo('beCute');
+      animal.should.not.have.ownProperty('beCute');
+    });
+
+    it('should make the animal cute', function(){
+      var animal = new Animal();
+      should.not.exist(animal.isCute);
+      animal.beCute();
+      animal.isCute.should.be.true;
+    });
+
   });
 });
 describe('Array', function () {

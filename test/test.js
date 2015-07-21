@@ -20,6 +20,12 @@ describe('Animal', function () {
       animal.isAlive.should.be.true;
       //defined in Animal.js
     });
+
+    it('should have 100% health', function(){
+      var animal = new Animal();
+      animal.health.should.equal(1);
+    });
+
     it('should accept a type', function () {
       var cat = new Animal('cat');
       var dog = new Animal('dog');
@@ -27,6 +33,15 @@ describe('Animal', function () {
       dog.type.should.equal('dog');
     })
   });
+
+  describe('#updateHealthStats', function () {
+    it('should change the health', function() {
+      var animal = new Animal();
+      animal.updateHealthStats();
+      animal.health.should.not.equal(1);
+    })
+  })
+
   describe('#beCute()', function () {
     it('should be a prototype method', function () {
       var animal = new Animal();

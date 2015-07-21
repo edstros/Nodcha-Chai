@@ -1,6 +1,4 @@
 var assert = require("chai").should();
-
-
 describe('Tests', function () {
   it('truthyness', function () {
     true.should.equal(true);
@@ -15,15 +13,13 @@ describe('Array', function () {
       });output.should.eql([1,3,5]);
     });
   });
-
-
   describe('#map()', function () {
     it('should create an array with the return value of the inner fn', function(){
       var array = [1,2,3,4,5];
       var output = array.map(function(item){
         return item * item;
       });
-      output.should.eql([1,4,9,16,25])
+      output.should.eql([1,4,9,16,25]);
     });
     it('should keep the same length', function () {
       var array = [1, 2, 3, 4, 5];
@@ -39,7 +35,5 @@ describe('Array', function () {
     });
   array.should.eql([1,2,3,4,5]);
   });
-
-
   });
 });

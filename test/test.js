@@ -20,12 +20,10 @@ describe('Animal', function () {
       animal.isAlive.should.be.true;
       //defined in Animal.js
     });
-
-    it('should have 100% health', function(){
+    it('should have 100% health', function () {
       var animal = new Animal();
       animal.health.should.equal(1);
     });
-
     it('should accept a type', function () {
       var cat = new Animal('cat');
       var dog = new Animal('dog');
@@ -33,15 +31,16 @@ describe('Animal', function () {
       dog.type.should.equal('dog');
     })
   });
-
   describe('#updateHealthStats', function () {
-    it('should change the health', function() {
+    it('should change the health', function (done) {
+     //need done agrument passed into the it block so that it waits on timeout
       var animal = new Animal();
-      animal.updateHealthStats();
-      animal.health.should.not.equal(1);
+      animal.updateHealthStats(function () {
+        animal.health.should.not.equal(1);
+        done();
+      });
     })
   })
-
   describe('#beCute()', function () {
     it('should be a prototype method', function () {
       var animal = new Animal();

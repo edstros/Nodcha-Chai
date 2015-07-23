@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('Thanks for downloading my app!');
+var thanks = require('./lib/thanks');
+
+console.log(thanks);

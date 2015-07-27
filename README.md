@@ -3,4 +3,4 @@
 [![Dependency Status](https://david-dm.org/edstros/Nodcha-Chai.svg)](https://david-dm.org/edstros/Nodcha-Chai)
 [![devDependency Status](https://david-dm.org/edstros/Nodcha-Chai/dev-status.svg)](https://david-dm.org/edstros/Nodcha-Chai#info=devDependencies) [![NSS Cohort 9](https://img.shields.io/badge/NSS-Cohort%209-ff69b4.svg)](http://nashvillesoftwareschool.com)
 
-Node, Mocha, Chai stuff
+Node, Mocha, Chai stuff. Includes tests.
